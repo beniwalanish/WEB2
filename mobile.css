@@ -84,7 +84,7 @@
 
   .tab-content h1 {
     font-size: 2rem;     /* 👈 Optional: reduce heading size too */
-    margin-bottom: 0;  /* 👈 Adjust this value to control spacing */
+    margin-bottom: .25rem;  /* 👈 Adjust this value to control spacing */
   }
 
   .heading-section h1,
