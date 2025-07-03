@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <!-- Main Fixed Header -->
+  <header>
+    <!-- Logo -->
+    <a href="index.html" class="logo">Agency <span>Bazar</span></a>
+    
+
+    <!-- Centered Nav -->
+    <nav class="nav-pill">
+      <div class="dropdown">
+        <button class="dropbtn"><b>SERVICES ▾</b></button>
+        <div class="dropdown-content">
+          <a href="#">Marketing</a>
+          <a href="#">Branding</a>
+          <a href="#">Consulting</a>
+        </div>
+      </div>
+      <a href="about.html"><b>ABOUT US</b></a>
+      <a href="studio.html"><b>STUDIO</b></a>
+      <a href="contact.html"><b>CONTACT</b></a>
+      <a href="blog.html"><b>BLOGS</b></a>
+      <a href="faq.html"><b>FAQ</b></a>
+      <a href="onboard.html" style="color: red;"><b>ONBOARD</b></a>
+    </nav>
+
+    <!-- Right CTA Button -->
+    <a href="form.html" class="book-btn">POST REQUIREMENT</a>
+  </header>
+
+
+
+<main class="blog-post">
+    <section class="post-container">
+      <h1>Why the Traditional Agency Search Sucks (and What to Do Instead)</h1>
+
+      <p>If you’ve ever tried to find the right agency for your business, you already know the pain: endless Googling, vague websites, inflated promises, slow replies, and the feeling that you’re gambling with your budget. The traditional agency search process is broken—and here’s why it sucks.</p>
+
+      <hr />
+
+      <h2>1. It’s Time-Consuming and Scattered</h2>
+      <p>There’s no central place to find great agencies. You bounce between directories, social media, random recommendations, and outdated portfolios. It’s like trying to find a needle in a haystack—if the haystack was spread across 20 browser tabs.</p>
+
+      <hr />
+
+      <h2>2. You Don’t Know Who to Trust</h2>
+      <p>Every agency says they’re “award-winning,” “data-driven,” and “results-obsessed.” But how do you separate the good ones from the slick marketers? With no standardized vetting or transparency, you’re forced to rely on gut instinct and testimonials (which may or may not be real).</p>
+
+      <hr />
+
+      <h2>3. Quoting Is a Nightmare</h2>
+      <p>Let’s say you manage to find 3 agencies you like. Now you need to reach out, schedule calls, wait for proposals, and compare totally different formats and pricing models. It’s confusing, inconsistent, and time-consuming—when all you want is clarity.</p>
+
+      <hr />
+
+      <h2>4. There’s Zero Matchmaking</h2>
+      <p>The traditional search doesn’t factor in your business stage, budget, industry, or preferred working style. So you might end up with an agency that’s too junior for your needs—or one that’s way out of your league (and budget).</p>
+
+      <hr />
+
+      <h2>5. No One Works at Your Speed</h2>
+      <p>Startups need momentum. But most agencies take weeks to get back, schedule a call, and send proposals. By then, your priorities may have shifted—or you’ve already hired someone else. The lack of agility kills progress.</p>
+
+      <hr />
+
+      <h2>So What’s the Fix?</h2>
+      <p>Enter: <strong>Agency Bazar</strong> — a smarter way to connect with vetted agencies without the hassle.</p>
+
+      <ul>
+        <li>✅ Tell us what you need: Share your goals, timeline, and budget in a few clicks.</li>
+        <li>✅ Get matched instantly: We connect you with trusted agencies who’ve already done similar work.</li>
+        <li>✅ Compare and hire fast: Get quotes, chat with matches, and hire the right fit—without wasting days.</li>
+      </ul>
+
+      <hr />
+
+      <h2>The Bottom Line</h2>
+      <p>The agency world needs a makeover. Businesses deserve a faster, easier, and more transparent way to find partners they can actually trust. That’s exactly why platforms like <strong>Agency Bazar</strong> exist—to take the guesswork and frustration out of the agency search.</p>
+
+      <p><strong>So next time you’re ready to grow?</strong><br />Don’t search. Match.</p>
+    </section>
+  </main>
+
+    
+
+
+
+  <!-- Blog Slider Section -->
+  <section class="blog-slider">
+  <h2>More Blogs</h2>
+
+  <div class="slider-wrapper">
+    <div class="slider-track" id="blogSlider">
+      <div class="blog-card">
+        <a href="blog-post1.html">
+            <img src="images/acq.png" alt="Blog 1" />
+        </a>
+        <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
+      </div>
+      <div class="blog-card">
+        <img src="images/drk.png" alt="Blog 2" />
+        <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
+      </div>
+      <div class="blog-card">
+        <img src="images/acq.png" alt="Blog 3" />
+        <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-controls">
+    <button onclick="slideBlog(-1)">←</button>
+    <button onclick="slideBlog(1)">→</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Custom Cursor Elements -->
+<div class="cursor-dot"></div>
+<script src="script.js"></script>
+
+    
+
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts (load after DOM is ready) -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading footer:', err));
+    });
+  </script>
+</body>
+</html>

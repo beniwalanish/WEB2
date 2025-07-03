@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <!-- Main Fixed Header -->
+  <header>
+    <!-- Logo -->
+    <a href="index.html" class="logo">Agency <span>Bazar</span></a>
+    
+
+    <!-- Centered Nav -->
+    <nav class="nav-pill">
+      <div class="dropdown">
+        <button class="dropbtn"><b>SERVICES ▾</b></button>
+        <div class="dropdown-content">
+          <a href="#">Marketing</a>
+          <a href="#">Branding</a>
+          <a href="#">Consulting</a>
+        </div>
+      </div>
+      <a href="about.html"><b>ABOUT US</b></a>
+      <a href="studio.html"><b>STUDIO</b></a>
+      <a href="contact.html"><b>CONTACT</b></a>
+      <a href="blog.html"><b>BLOGS</b></a>
+      <a href="faq.html"><b>FAQ</b></a>
+      <a href="onboard.html" style="color: red;"><b>ONBOARD</b></a>
+    </nav>
+
+    <!-- Right CTA Button -->
+    <a href="form.html" class="book-btn">POST REQUIREMENT</a>
+  </header>
+
+
+
+<main class="blog-post">
+    <section class="post-container">
+      <h1>What Is an Agency?</h1>
+
+      <p><strong>Introduction</strong></p>
+      <p>In today’s fast-moving business landscape, the term “agency” is used frequently—whether you’re launching a startup, scaling a brand, or outsourcing a function. But what exactly is an agency, and why are they essential in the modern economy?</p>
+      <p>Let’s break it down.</p>
+
+      <hr />
+
+      <h2>What Is an Agency?</h2>
+      <p>At its core, an agency is a business or organization that provides specialized services on behalf of another business or client. Agencies act as external partners, bringing expertise, execution, and strategy to the table—so companies don’t have to build those capabilities in-house.</p>
+      <p>Agencies typically work on a project basis or retainer, helping clients achieve specific goals—like launching a campaign, developing a product, improving performance, or expanding reach.</p>
+
+      <hr />
+
+      <h2>Common Types of Agencies</h2>
+      <ul>
+        <li><strong>Marketing Agencies</strong> – Run campaigns, manage social media, create content, and generate leads.</li>
+        <li><strong>Design Agencies</strong> – Specialize in brand identity, UI/UX design, product design, and creative assets.</li>
+        <li><strong>Development Agencies</strong> – Build websites, apps, and custom software solutions.</li>
+        <li><strong>PR Agencies</strong> – Manage public image, media relations, and reputation.</li>
+        <li><strong>Growth & Performance Agencies</strong> – Focus on ROI-driven tactics like SEO, ads, and funnels.</li>
+        <li><strong>Staffing Agencies</strong> – Source and place talent for permanent or contract roles.</li>
+      </ul>
+
+      <hr />
+
+      <h2>Why Do Companies Hire Agencies?</h2>
+      <ul>
+        <li><strong>Expertise:</strong> Agencies are focused on one area and typically have deep knowledge and proven processes.</li>
+        <li><strong>Speed:</strong> Hiring an agency is often faster than hiring and training an internal team.</li>
+        <li><strong>Flexibility:</strong> Agencies can scale their work up or down based on your needs.</li>
+        <li><strong>Focus:</strong> By outsourcing, your internal team can focus on core business functions.</li>
+        <li><strong>Fresh Perspective:</strong> Agencies often bring new ideas and unbiased thinking.</li>
+      </ul>
+
+      <hr />
+
+      <h2>Are Agencies Only for Big Companies?</h2>
+      <p>Absolutely not. In fact, agencies are especially valuable for startups, small businesses, and solo founders who want high-quality work without hiring full-time employees.</p>
+      <p>Platforms like <strong>Agency Bazar</strong> exist to make it even easier—by helping you connect with vetted agencies across categories, compare proposals, and get work done faster.</p>
+
+      <hr />
+
+      <h2>Conclusion</h2>
+      <p>An agency is more than just an external team—it’s a partner in your business journey. Whether you’re building a brand, launching a product, or scaling operations, the right agency can save time, reduce risk, and help you grow smarter.</p>
+    </section>
+  </main>
+
+    
+
+
+
+<!-- Blog Slider Section -->
+  <section class="blog-slider">
+  <h2>More Blogs</h2>
+
+  <div class="slider-wrapper">
+    <div class="slider-track" id="blogSlider">
+      <div class="blog-card">
+        <a href="blog-post1.html">
+            <img src="images/agency.png" alt="Blog 1" />
+        </a>
+        <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
+      </div>
+      <div class="blog-card">
+        <img src="images/sucks.png" alt="Blog 2" />
+        <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
+      </div>
+      <div class="blog-card">
+        <img src="images/mistakes.png" alt="Blog 3" />
+        <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-controls">
+    <button onclick="slideBlog(-1)">←</button>
+    <button onclick="slideBlog(1)">→</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Custom Cursor Elements -->
+<div class="cursor-dot"></div>
+<script src="script.js"></script>
+
+    
+
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts (load after DOM is ready) -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading footer:', err));
+    });
+  </script>
+</body>
+</html>

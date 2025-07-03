@@ -1,0 +1,153 @@
+.site-footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 3rem 1rem 2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #f5c518; /* Yellow tone */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
+
+
+/* Footer Styles */
+footer {
+  background-color: #1a1a1a; /* Or your footer background */
+  padding: 2rem 1rem;
+  border-top-left-radius: 60px;   /* Curve top-left corner */
+  border-top-right-radius: 60px;  /* Curve top-right corner */
+  color: #fff;
+}
+
+
+
+
+/* Marquee Styles */
+.footer-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+  position: relative;
+  margin: 0; /* remove any side gaps */
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll-left 40s linear infinite;
+}
+
+.marquee-track span {
+  font-size: 5rem;
+  color: rgb(255, 255, 255); /* change to your theme color */
+  padding-right: 4rem;
+}
+
+.footer-marquee span {
+  margin: 0;       /* remove margin */
+  padding: 0 1rem; /* optional: reduce spacing here */
+  display: inline-block;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------
+   Call-to-Action Section (Above Footer)
+------------------------------ */
+.cta-section {
+  background-color: #6366f1; /* match the purple tone */
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+}
+
+.cta-section h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.cta-button {
+  background-color: black;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: black;
+}

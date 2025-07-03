@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+
+  <!-- Main Fixed Header -->
+  <header>
+    <!-- Logo -->
+    <a href="index.html" class="logo">Agency <span>Bazar</span></a>
+
+    <!-- Centered Nav -->
+    <nav class="nav-pill">
+      <div class="dropdown">
+        <button class="dropbtn"><b>SERVICES ▾</b></button>
+        <div class="dropdown-content">
+          <a href="#">Marketing</a>
+          <a href="#">Branding</a>
+          <a href="#">Consulting</a>
+        </div>
+      </div>
+      <a href="about.html"><b>ABOUT US</b></a>
+      <a href="studio.html"><b>STUDIO</b></a>
+      <a href="contact.html"><b>CONTACT</b></a>
+      <a href="blog.html"><b>BLOGS</b></a>
+      <a href="faq.html"><b>FAQ</b></a>
+      <a href="onboard.html" style="color: red;"><b>ONBOARD</b></a>
+    </nav>
+
+    <!-- Right CTA Button -->
+    <a href="form.html" class="book-btn">POST REQUIREMENT</a>
+  </header>
+
+  <!-- Heading Section -->
+  <section class="heading-section">
+    <h1>Blogs</h1>
+  </section>
+
+  <!-- Blog Case Studies Section -->
+  <section class="case-studies">
+    <div class="case-grid">
+
+      <!-- Blog Card 1 -->
+      <h5><a href="blog-post1.html" class="case-title-link">What is an Agency?</a></h5>
+      <a href="blog-post1.html" class="case-card">
+        <div class="case-image" style="background-image: url('images/agency.png');"></div>
+      </a>
+      <br><br>
+
+      <!-- Blog Card 2 -->
+      <h3><a href="blog-post2.html" class="case-title-link">Why the Traditional Agency Search Sucks</a></h3>
+      <a href="blog-post2.html" class="case-card">
+        <div class="case-image" style="background-image: url('images/sucks.png');"></div>
+      </a>
+      <br><br>
+
+      <!-- Blog Card 3 -->
+      <h3><a href="blog-post3.html" class="case-title-link">Mistakes Startups Make When Hiring an Agency</a></h3>
+      <a href="blog-post3.html" class="case-card">
+        <div class="case-image" style="background-image: url('images/mistakes.png');"></div>
+      </a>
+      <br><br>
+
+      <!-- Blog Card 4 -->
+      <h3><a href="blog-post4.html" class="case-title-link">Questions to Ask Before Signing with an Agency</a></h3>
+      <a href="blog-post4.html" class="case-card"> <!-- ✅ fixed typo from blog-pos4.html -->
+        <div class="case-image" style="background-image: url('images/question.png');"></div>
+      </a>
+      <br><br>
+
+    </div>
+  </section>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot"></div>
+  <script src="script.js"></script>
+
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Footer Script -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading footer:', err));
+    });
+  </script>
+
+</body>
+</html>

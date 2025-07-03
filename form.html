@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Agency <span>Mart</span></a>
+
+    <nav class="nav-pill">
+      <div class="dropdown">
+        <button class="dropbtn"><b>SERVICES ▾</b></button>
+        <div class="dropdown-content">
+          <a href="#">Marketing</a>
+          <a href="#">Branding</a>
+          <a href="#">Consulting</a>
+        </div>
+      </div>
+      <a href="about.html"><b>ABOUT US</b></a>
+      <a href="#"><b>CASE STUDIES</b></a>
+    </nav>
+
+    <a href="#" class="book-btn">CONTACT</a>
+  </header>
+
+  <!-- Main Content -->
+  <!-- Button to open the popup -->
+<button id="openForm" class="form-popup-btn">Start Your Project</button>
+
+<!-- Popup Modal -->
+<div id="projectFormPopup" class="form-popup">
+  <div class="form-popup-content">
+    <span class="close-popup">&times;</span>
+
+    <form id="multiStepForm">
+      <!-- Step 1: Project Info -->
+      <div class="form-step active" id="step1">
+        <h2>1. Project Information</h2>
+        <label>What services do you need?</label>
+        <input type="text" placeholder="e.g. Web development, branding..." required>
+
+        <label>Project Name</label>
+        <input type="text" placeholder="e.g. E-commerce Website Revamp" required>
+
+        <label>Please describe the problem you are facing</label>
+        <textarea placeholder="e.g. Low website traffic"></textarea>
+
+        <label>Context and Goals</label>
+        <textarea placeholder="e.g. Launching a new product..."></textarea>
+
+        <label>Target Audience or Market</label>
+        <input type="text" placeholder="e.g. Small businesses, tech-savvy users...">
+
+        <label>Preferred Service Type</label>
+        <select>
+          <option>One-time project</option>
+          <option>Long-term/ongoing engagement</option>
+          <option>Consulting only</option>
+          <option>Full implementation + support</option>
+        </select>
+
+        <label>Inspiration or References</label>
+        <textarea placeholder="e.g. I like the layout of xyz.com"></textarea>
+
+        <label>Technology Preferences</label>
+        <input type="text" placeholder="e.g. WordPress, React, Python">
+
+        <label>Preferred Communication Method</label>
+        <select>
+          <option>Email</option>
+          <option>Phone call</option>
+          <option>WhatsApp</option>
+          <option>Video meetings</option>
+          <option>In-person</option>
+        </select>
+
+        <label>Urgency Level</label>
+        <select>
+          <option>Low: Can wait</option>
+          <option>Medium: In a few weeks</option>
+          <option>High: Immediate/ASAP</option>
+        </select>
+
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <!-- Step 2: Budget -->
+      <div class="form-step" id="step2">
+        <h2>2. Budget Information</h2>
+        <label>What is your budget?</label>
+        <input type="text" placeholder="e.g. $5,000 - $10,000">
+
+        <button type="button" class="prev-btn">Back</button>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <!-- Step 3: Personal Details -->
+      <div class="form-step" id="step3">
+        <h2>3. Personal Details</h2>
+        <label>Business Name</label>
+        <input type="text" required>
+
+        <label>Phone Number</label>
+        <input type="tel">
+
+        <label>Business Category</label>
+        <input type="text">
+
+        <label>Website Link</label>
+        <input type="url">
+
+        <button type="button" class="prev-btn">Back</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  const popup = document.getElementById('projectFormPopup');
+  const openBtn = document.getElementById('openForm');
+  const closeBtn = document.querySelector('.close-popup');
+  const steps = document.querySelectorAll('.form-step');
+  const nextBtns = document.querySelectorAll('.next-btn');
+  const prevBtns = document.querySelectorAll('.prev-btn');
+  let currentStep = 0;
+
+  openBtn.onclick = () => popup.style.display = 'flex';
+  closeBtn.onclick = () => popup.style.display = 'none';
+
+  nextBtns.forEach(btn => btn.onclick = () => {
+    if (currentStep < steps.length - 1) {
+      steps[currentStep].classList.remove('active');
+      currentStep++;
+      steps[currentStep].classList.add('active');
+    }
+  });
+
+  prevBtns.forEach(btn => btn.onclick = () => {
+    if (currentStep > 0) {
+      steps[currentStep].classList.remove('active');
+      currentStep--;
+      steps[currentStep].classList.add('active');
+    }
+  });
+
+  document.getElementById('multiStepForm').onsubmit = (e) => {
+    e.preventDefault();
+    alert('Form submitted successfully!');
+    popup.style.display = 'none';
+  };
+</script>
+
+
+
+
+
+<!-- Custom Cursor Elements -->
+<div class="cursor-dot"></div>
+<script src="script.js"></script>
+    
+
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts (load after DOM is ready) -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading footer:', err));
+    });
+  </script>
+</body>
+</html>

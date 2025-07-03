@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+
+  <!-- Main Fixed Header -->
+  <header>
+    <!-- Logo -->
+    <a href="index.html" class="logo">Agency <span>Bazar</span></a>
+
+    <!-- Centered Nav -->
+    <nav class="nav-pill">
+      <div class="dropdown">
+        <button class="dropbtn"><b>SERVICES ▾</b></button>
+        <div class="dropdown-content">
+          <a href="#">Marketing</a>
+          <a href="#">Branding</a>
+          <a href="#">Consulting</a>
+        </div>
+      </div>
+      <a href="about.html"><b>ABOUT US</b></a>
+      <a href="studio.html"><b>STUDIO</b></a>
+      <a href="contact.html"><b>CONTACT</b></a>
+      <a href="blog.html"><b>BLOGS</b></a>
+      <a href="faq.html"><b>FAQ</b></a>
+      <a href="onboard.html" style="color: red;"><b>ONBOARD</b></a>
+    </nav>
+
+    <!-- Right CTA Button -->
+    <a href="form.html" class="book-btn">POST REQUIREMENT</a>
+  </header>
+
+  <!-- Main Content -->
+  <section class="heading-section">
+    <h1>About Us</h1>
+  </section>
+
+  <!-- Hero Image -->
+  <img src="images/ani.jpeg" style="width: 100%; height: auto; display: block;" />
+
+  <!-- About Us Section -->
+  <section class="about-card">
+    <div class="about-badge">ABOUT US</div>
+    <br><br>
+    <p style="font-size: 18px;"><b>Atomik Growth is a full-service podcast partner for top voices in tech — founders, investors, and operators with something to say.</b></p>
+    <br><br>
+    <p style="font-size: 18px;"><b>We handle the entire process: guest research, prep, production, post, and distribution. Every episode is built to reflect your thinking and reach the people who matter.</b></p>
+    <br><br>
+    <p style="font-size: 18px;"><b>Our team blends editorial depth with strategic execution.</b></p>
+    <br><br>
+    <p style="font-size: 18px;"><b>You speak. We handle the rest.</b></p>
+    <br><br>
+    <p style="font-size: 18px;"><b>Because great conversations deserve elite execution.</b></p>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="about-card">
+    <div class="about-badge">OUR STORY</div>
+    <br><br>
+    <p style="font-size: 18px;"><b>When we started Atomik Growth, we’d seen too many promising podcasts stall before gaining traction. Shows would launch with excitement, strong guests, and sharp conversations—but soon lose momentum. Guest research became inconsistent. Editing slipped. Distribution lacked strategy. Good conversations went unheard.</b></p>
+    <br><br>
+    <p style="font-size: 18px;"><b>We knew there was a better way.</b></p>
+    <br><br>
+    <p style="font-size: 18px;"><b>We built Atomik Growth to help tech companies and VCs launch and scale podcasts effectively. Our distributed team across 11 countries handles guest research, production, post-production, and strategic distribution.</b></p>
+    <br><br>
+    <p style="font-size: 18px;"><b>Important voices deserve to be heard clearly. Our job is to ensure they are.</b></p>
+  </section>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot"></div>
+  <script src="script.js"></script>
+
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Footer Script -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading footer:', err));
+    });
+  </script>
+
+</body>
+</html>

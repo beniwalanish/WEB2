@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <!-- Main Fixed Header -->
+  <header>
+    <!-- Logo -->
+    <a href="index.html" class="logo">Agency <span>Bazar</span></a>
+    
+
+    <!-- Centered Nav -->
+    <nav class="nav-pill">
+      <div class="dropdown">
+        <button class="dropbtn"><b>SERVICES ▾</b></button>
+        <div class="dropdown-content">
+          <a href="#">Marketing</a>
+          <a href="#">Branding</a>
+          <a href="#">Consulting</a>
+        </div>
+      </div>
+      <a href="about.html"><b>ABOUT US</b></a>
+      <a href="studio.html"><b>STUDIO</b></a>
+      <a href="contact.html"><b>CONTACT</b></a>
+      <a href="blog.html"><b>BLOGS</b></a>
+      <a href="faq.html"><b>FAQ</b></a>
+      <a href="onboard.html" style="color: red;"><b>ONBOARD</b></a>
+    </nav>
+
+    <!-- Right CTA Button -->
+    <a href="form.html" class="book-btn">POST REQUIREMENT</a>
+  </header>
+
+  <!-- Main Content -->
+  <section class="heading-section">
+    <h1>More agencies.</h1>
+    <h1> More options.</h1>
+    <h1>More success.</h1>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section class="card-section">
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h3>TELL US WHAT YOU NEED</h3>
+        </div>
+        <div class="flip-back">
+          <p>Whether you’re launching a product, scaling your marketing, or fixing a growth bottleneck — start by submitting a simple brief.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h3>GET MATCHED WITH TOP AGENCIES</h3>
+        </div>
+        <div class="flip-back">
+          <p>Based on your needs, we match you with a shortlist of verified agencies that specialize in your domain.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h3>COMPARE QUOTES AND HIRE</h3>
+        </div>
+        <div class="flip-back">
+          <p>Receive personalized proposals, compare deliverables, timelines, and pricing — then choose who to work with.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<script src="carousel-tabs.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="about-card">
+  <section class="section-title" style="padding:20px;">
+      <h2>
+        Why Businesses <span class="highlight">Love this Model</span>
+      </h2>
+    </section>
+
+    
+  <section class="card-grid">
+  <div class="card">
+    <h3>Curated, Vetted Agencies Only</h3>
+    <br>
+    <br>
+    <br>
+    <p>We screen every agency for quality, experience, and reliability — so you’re not wasting time or money.</p>
+  </div>
+
+  <div class="card">
+    <h3>Fast Matching, Zero Guesswork</h3>
+    <br>
+    <br>
+    <br>
+    <p>Post your brief once. Get matched with the right partners in under 48 hours — no endless searching.</p>
+  </div>
+
+  <div class="card" style="background-color:#3970ec;">
+    <h3>Transparent Quotes, Side-by-Side</h3>
+    <br>
+    <br>
+    <br>
+    <p>Receive proposals tailored to your budget and goals. Compare timelines, pricing, and approaches easily.</p>
+  </div>
+
+  <div class="card">
+    <h3>One Platform, Every Service</h3>
+    <br>
+    <br>
+    <br>
+    <p>Whether it’s design, dev, marketing, or legal — everything your business needs under one roof.</p>
+  </div>
+
+  <div class="card">
+    <h3>Project Support When You Need It</h3>
+    <br>
+    <br>
+    <br>
+    <p>We don’t disappear after the match — our team is here to support your project success.</p>
+  </div>
+
+  <div class="card">
+    <h3>Built for Founders & Teams Who Move Fast</h3>
+    <br>
+    <br>
+    <br>
+    <p>We know startups and scaling teams don’t have time to waste. Agency Bazar simplifies the process from brief to onboarding.</p>
+  </div>
+  
+</section>
+</section>
+
+
+  <section class="about-card">
+  <div class="about-badge">OUR STORY</div>
+  <br>
+  <br>
+  <p style="font-size: 18px;"><b>When we started Atomik Growth, we’d seen too many promising podcasts stall before gaining traction. Shows would launch with excitement, strong guests, and sharp conversations—but soon lose momentum. Guest research became inconsistent. Editing slipped. Distribution lacked strategy. Good conversations went unheard.</b></p>
+  <br>
+  <br>
+  <p style="font-size: 18px;"><b>We knew there was a better way.</b></p>
+  <br>
+  <br>
+  <p style="font-size: 18px;"><b>We built Atomik Growth to help tech companies and VCs launch and scale podcasts effectively. Our distributed team across 11 countries handles guest research, production, post-production, and strategic distribution.</b></p>
+  <br>
+  <br>
+  <p style="font-size: 18px;"><b>Important voices deserve to be heard clearly. Our job is to ensure they are.</b></p>
+</section>
+
+
+
+
+<!-- Custom Cursor Elements -->
+<div class="cursor-dot"></div>
+<script src="script.js"></script>
+
+    
+
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts (load after DOM is ready) -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading footer:', err));
+    });
+  </script>
+</body>
+</html>

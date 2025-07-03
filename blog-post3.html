@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <!-- Main Fixed Header -->
+  <header>
+    <!-- Logo -->
+    <a href="index.html" class="logo">Agency <span>Bazar</span></a>
+    
+
+    <!-- Centered Nav -->
+    <nav class="nav-pill">
+      <div class="dropdown">
+        <button class="dropbtn"><b>SERVICES ▾</b></button>
+        <div class="dropdown-content">
+          <a href="#">Marketing</a>
+          <a href="#">Branding</a>
+          <a href="#">Consulting</a>
+        </div>
+      </div>
+      <a href="about.html"><b>ABOUT US</b></a>
+      <a href="studio.html"><b>STUDIO</b></a>
+      <a href="contact.html"><b>CONTACT</b></a>
+      <a href="blog.html"><b>BLOGS</b></a>
+      <a href="faq.html"><b>FAQ</b></a>
+      <a href="onboard.html" style="color: red;"><b>ONBOARD</b></a>
+    </nav>
+
+    <!-- Right CTA Button -->
+    <a href="form.html" class="book-btn">POST REQUIREMENT</a>
+  </header>
+
+
+
+<main class="blog-post">
+    <section class="post-container">
+      <h1>Mistakes Startups Make When Hiring an Agency (And How to Avoid Them)</h1>
+
+      <p>Hiring an agency can be a game-changing move for your startup—but only if done right. Many early-stage companies rush the process, get overwhelmed by shiny portfolios, or simply expect too much too fast. The result? Wasted resources, missed goals, and serious regret.</p>
+
+      <p>Here are six common mistakes startups make when hiring an agency—and how to avoid them:</p>
+
+      <hr />
+
+      <h2>1. Lack of Clear Expectations</h2>
+      <p>Many startups approach agencies with vague goals like “we want more visibility” or “help us grow.” Without specific expectations, even the best agency will struggle to deliver.</p>
+      <p><strong>📌 Fix:</strong> Before hiring, define what success looks like. Do you need more leads, faster product development, better branding? Be clear about deliverables, timelines, and results.</p>
+
+      <hr />
+
+      <h2>2. Not Researching the Agency’s Background</h2>
+      <p>Just because an agency looks good online doesn’t mean they’re right for you. Founders often skip due diligence and end up working with teams that don’t understand their niche or industry.</p>
+      <p><strong>📌 Fix:</strong> Check case studies, client reviews, past work, and even ask for references. Look for agencies with experience solving problems similar to yours.</p>
+
+      <hr />
+
+      <h2>3. Ignoring Chemistry and Communication</h2>
+      <p>You’ll be working closely with this team—possibly for months. If there’s poor communication, missed meetings, or a mismatch in working style, the partnership will fall apart.</p>
+      <p><strong>📌 Fix:</strong> Choose an agency you connect with. Good communication, cultural alignment, and responsiveness matter just as much as skill.</p>
+
+      <hr />
+
+      <h2>4. Not Considering Long-Term Benefit</h2>
+      <p>Some startups hire agencies just to “fix this one thing,” without thinking long-term. This leads to piecemeal work, inconsistent branding, or strategies that don’t scale.</p>
+      <p><strong>📌 Fix:</strong> Look for partners, not vendors. A great agency should help you grow sustainably, not just tick off a task list.</p>
+
+      <hr />
+
+      <h2>5. Neglecting to Set a Budget Upfront</h2>
+      <p>Avoiding budget talk feels safe—but it creates problems later. Agencies don’t know how to scope your project properly without a budget, which can lead to wasted proposals or misaligned expectations.</p>
+      <p><strong>📌 Fix:</strong> Be honest about what you can afford. A clear budget helps agencies suggest the best approach and ensures everyone’s on the same page.</p>
+
+      <hr />
+
+      <h2>6. Expecting a Magic Bullet</h2>
+      <p>Startups often assume hiring an agency will instantly fix everything. But growth takes time, iteration, and collaboration. Agencies aren’t magicians—they’re partners in execution.</p>
+      <p><strong>📌 Fix:</strong> Be realistic. The right agency will deliver value, but it requires your involvement, feedback, and trust in the process.</p>
+
+      <hr />
+
+      <h2>Final Thoughts</h2>
+      <p>Hiring an agency is one of the most important decisions a startup can make. Done right, it unlocks growth, creativity, and execution power you can’t get in-house. Done wrong, it drains time and money you can’t afford to lose.</p>
+
+      <p><strong>Agency Bazar</strong> is designed to help you skip the guesswork. We match startups with vetted agencies that get it—so you can grow with confidence.</p>
+    </section>
+  </main>
+
+    
+
+
+
+
+  <!-- Blog Slider Section -->
+  <section class="blog-slider">
+  <h2>More Blogs</h2>
+
+  <div class="slider-wrapper">
+    <div class="slider-track" id="blogSlider">
+      <div class="blog-card">
+        <a href="blog-post1.html">
+            <img src="images/acq.png" alt="Blog 1" />
+        </a>
+        <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
+      </div>
+      <div class="blog-card">
+        <img src="images/drk.png" alt="Blog 2" />
+        <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
+      </div>
+      <div class="blog-card">
+        <img src="images/acq.png" alt="Blog 3" />
+        <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-controls">
+    <button onclick="slideBlog(-1)">←</button>
+    <button onclick="slideBlog(1)">→</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- Custom Cursor Elements -->
+<div class="cursor-dot"></div>
+<script src="script.js"></script>
+
+    
+
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts (load after DOM is ready) -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading footer:', err));
+    });
+  </script>
+</body>
+</html>
