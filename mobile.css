@@ -95,6 +95,7 @@
   .underlined-heading {
     font-size: 2.5rem;
     text-align: left;
+    
   }
 
   .heading-section {
@@ -103,7 +104,7 @@
   align-items: center;     /* Optional: centers vertically if there's height */
   text-align: center;
   margin-top: 5px;   /* reduce this */
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .heading-section h1 {
