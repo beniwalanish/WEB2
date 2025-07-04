@@ -206,5 +206,6 @@ tabButtons.forEach(btn => {
 
 
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("show");
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("show");
 }

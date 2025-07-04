@@ -3,6 +3,10 @@
     flex-direction: column;
     padding: 10px 20px;
     align-items: flex-start;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid #e0e0e0 !important;
   }
 
   .nav-pill {
@@ -98,6 +102,8 @@
   justify-content: center; /* Centers horizontally */
   align-items: center;     /* Optional: centers vertically if there's height */
   text-align: center;
+  margin-top: 5px;   /* reduce this */
+  margin-bottom: 10px;
 }
 
 .heading-section h1 {
@@ -128,7 +134,7 @@
   }
 
   .hero {
-    text-align: left;
+    text-align: center;
     padding: 60px 20px;
   }
 
@@ -139,6 +145,57 @@
   .index-card,
   .liquid-glass-card {
     padding: 30px 20px;
+  }
+
+  .badge {
+  position: absolute;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  
+  max-width: 200px;
+  text-align: center;
+}
+
+  .tech-founders {
+    top: 18%;
+    left:270px;
+  }
+
+  .entrepreneurs {
+    top: 15%;
+    left: 20px;
+  }
+
+  .business-owners {
+    top: 23%;
+    left: 40px;
+  }
+
+  .non-technical {
+    top: 45%;
+    left: 240px;
+  }
+
+  .general-partners {
+    top: 57%;
+    right: 270px;
+  }
+
+  .agencies {
+    top: 60%;
+    right: 20px;
+  }
+
+  .production-houses {
+    top: 65%;
+    right: 100px;
+  }
+
+  .product-managers {
+    top: 35%;
+    right:280px
   }
 }
 
@@ -153,19 +210,30 @@
   color: #fff;
   z-index: 9999;
   padding: 20px;
-  display: none;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;   /* 🔁 Changed from space-between */
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+
+  
 }
 
+/* Visible state with animation */
 .mobile-menu.show {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .mobile-menu-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 80px;
 }
 
 .logo {
@@ -180,18 +248,21 @@
 }
 
 .menu-close,
-.cart-icon,
 .menu-toggle {
   background: none;
   border: none;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  
 }
 
 .menu-toggle {
   position: fixed;
-  top: 20px;
+  top: 5px;
   right: 20px;
   z-index: 999;
   background: none;
@@ -203,7 +274,7 @@
 .mobile-nav ul {
   list-style: none;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 10px; 
 }
 
 .mobile-nav ul li {
@@ -215,6 +286,9 @@
   font-weight: bold;
   color: white;
   text-decoration: none;
+  text-align: right;       /* Right-align text */
+  display: block;          /* Make it take full width */
+  padding-right: 20px;
 }
 
 .mobile-footer-links {
@@ -245,3 +319,55 @@
   color: #fff;
   text-decoration: none;
 }
+
+
+
+
+.contact-form {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .form-group-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    padding-bottom: 8px;
+    box-sizing: border-box;
+  }
+
+  .form-group-row input {
+    flex: 1;
+    font-size: 1rem;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: #000;
+    outline: none;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .form-group-row input::placeholder {
+    color: #aaa; /* Make sure placeholder is visible */
+    font-size: 1rem;
+  }
+
+  .form-group-row button {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  padding: 0 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+
+
+

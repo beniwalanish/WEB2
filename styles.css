@@ -2002,3 +2002,23 @@ textarea {
 
 
 
+/* Hide by default on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #000; /* Or white if your background is dark */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    cursor: pointer;
+  }
+}
