@@ -319,6 +319,7 @@ l
 
 .accordion-content {
   font-size: 25px;
+  line-height: 2;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease, opacity 1s ease;
