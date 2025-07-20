@@ -586,6 +586,99 @@
 .process-card p {
   font-size: 0.9rem;
 }
+
+/* blog-post1-styles.css */
+.blog-post {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 80px 20px;
+}
+
+.post-container {
+  max-width: 1100px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.post-container h1 {
+  font-size: 2.8rem;
+  color: #fcd91d;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.post-container h2 {
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1rem;
+  color: #3970ec;
+  text-align: left;
+}
+
+.post-container p {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.post-container ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-container li {
+  margin-bottom: 0.8rem;
+  color: #000000;
+}
+
+/* blog-slider */
+  .blog-slider {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 60px 20px;
+    overflow: hidden;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+ }
+
+  .slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slider-track {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    transition: transform 1.5s ease;
+    gap: 0;
+  }
+
+  .blog-card {
+    min-width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .slider-controls {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .slider-controls button {
+    width: 125px;
+    height: 35px;
+    font-size: 1.2rem;
+    padding: 0;
+  }
 }
 
 /* --------------------------------------------

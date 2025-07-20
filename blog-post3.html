@@ -6,6 +6,7 @@
   <title>Mistakes Startups Make When Hiring an Agency (And How to Avoid Them) | Agency Bazar</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="mobile.css" />
 </head>
 <body>
   <!-- Main Fixed Header -->
@@ -36,7 +37,41 @@
     <a href="form.html" class="book-btn">POST REQUIREMENT</a>
   </header>
 
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="logo" style="color: white;">Agency <span>Bazar</span></a>
+      <div class="menu-icons">
+        <button class="menu-close" onclick="toggleMenu()">✕</button>
+      </div>
+    </div>
 
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="about.html"><b>ABOUT US</b></a></li>
+        <li><a href="studio.html"><b>STUDIO</b></a></li>
+        <li><a href="contact.html"><b>CONTACT</b></a></li>
+        <li><a href="blog.html"><b>BLOGS</b></a></li>
+        <li><a href="faq.html"><b>FAQ</b></a></li>
+        <li><a href="onboard.html" style="color: red;"><b>ONBOARD</b></a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-footer-links">
+      <div>
+        <p>CONNECT WITH US</p>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Toggle Button -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
 <main class="blog-post">
     <section class="post-container">
