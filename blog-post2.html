@@ -13,7 +13,6 @@
   <header>
     <!-- Logo -->
     <a href="index.html" class="logo">Agency <span>Bazar</span></a>
-    
 
     <!-- Centered Nav -->
     <nav class="nav-pill">
@@ -73,10 +72,10 @@
   <!-- Menu Toggle Button -->
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-<main class="blog-post">
+  <!-- Blog Article -->
+  <main class="blog-post">
     <section class="post-container">
       <h1>Why the Traditional Agency Search Sucks (and What to Do Instead)</h1>
-
       <p>If you’ve ever tried to find the right agency for your business, you already know the pain: endless Googling, vague websites, inflated promises, slow replies, and the feeling that you’re gambling with your budget. The traditional agency search process is broken—and here’s why it sucks.</p>
 
       <hr />
@@ -108,7 +107,6 @@
 
       <h2>So What’s the Fix?</h2>
       <p>Enter: <strong>Agency Bazar</strong> — a smarter way to connect with vetted agencies without the hassle.</p>
-
       <ul>
         <li>✅ Tell us what you need: Share your goals, timeline, and budget in a few clicks.</li>
         <li>✅ Get matched instantly: We connect you with trusted agencies who’ve already done similar work.</li>
@@ -124,57 +122,42 @@
     </section>
   </main>
 
-    
-
-
-
   <!-- Blog Slider Section -->
   <section class="blog-slider">
-  <h2>More Blogs</h2>
-
-  <div class="slider-wrapper">
-    <div class="slider-track" id="blogSlider">
-      <div class="blog-card">
-        <a href="blog-post1.html">
+    <h2>More Blogs</h2>
+    <div class="slider-wrapper">
+      <div class="slider-track" id="blogSlider">
+        <div class="blog-card">
+          <a href="blog-post1.html">
             <img src="images/acq.png" alt="Blog 1" />
-        </a>
-        <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
-      </div>
-      <div class="blog-card">
-        <img src="images/drk.png" alt="Blog 2" />
-        <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
-      </div>
-      <div class="blog-card">
-        <img src="images/acq.png" alt="Blog 3" />
-        <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+          </a>
+          <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
+        </div>
+        <div class="blog-card">
+          <img src="images/drk.png" alt="Blog 2" />
+          <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
+        </div>
+        <div class="blog-card">
+          <img src="images/acq.png" alt="Blog 3" />
+          <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="slider-controls">
-    <button onclick="slideBlog(-1)">←</button>
-    <button onclick="slideBlog(1)">→</button>
-  </div>
-</section>
+    <div class="slider-controls">
+      <button onclick="slideBlog(-1)">←</button>
+      <button onclick="slideBlog(1)">→</button>
+    </div>
+  </section>
 
-
-
-
-
-
-
-
-
-<!-- Custom Cursor Elements -->
-<div class="cursor-dot"></div>
-<script src="script.js"></script>
-
-    
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot"></div>
+  <script src="script.js"></script>
 
   <!-- Footer Container -->
   <div id="footer-container"></div>
 
-  <!-- Scripts (load after DOM is ready) -->
+  <!-- Footer Fetch Script -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       fetch('footer.html')

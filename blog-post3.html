@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="mobile.css" />
 </head>
+
 <body>
-  <!-- Main Fixed Header -->
+  <!-- Fixed Header -->
   <header>
     <!-- Logo -->
     <a href="index.html" class="logo">Agency <span>Bazar</span></a>
-    
 
-    <!-- Centered Nav -->
+    <!-- Navigation Menu -->
     <nav class="nav-pill">
       <div class="dropdown">
         <button class="dropbtn"><b>SERVICES ▾</b></button>
@@ -33,11 +33,11 @@
       <a href="onboard.html" style="color: red;"><b>ONBOARD</b></a>
     </nav>
 
-    <!-- Right CTA Button -->
+    <!-- CTA Button -->
     <a href="form.html" class="book-btn">POST REQUIREMENT</a>
   </header>
 
-  <!-- Mobile Menu Overlay -->
+  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
       <a href="index.html" class="logo" style="color: white;">Agency <span>Bazar</span></a>
@@ -70,10 +70,11 @@
     </div>
   </div>
 
-  <!-- Menu Toggle Button -->
+  <!-- Menu Toggle Icon -->
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-<main class="blog-post">
+  <!-- Blog Post -->
+  <main class="blog-post">
     <section class="post-container">
       <h1>Mistakes Startups Make When Hiring an Agency (And How to Avoid Them)</h1>
 
@@ -126,59 +127,45 @@
     </section>
   </main>
 
-    
-
-
-
-
   <!-- Blog Slider Section -->
   <section class="blog-slider">
-  <h2>More Blogs</h2>
+    <h2>More Blogs</h2>
 
-  <div class="slider-wrapper">
-    <div class="slider-track" id="blogSlider">
-      <div class="blog-card">
-        <a href="blog-post1.html">
+    <div class="slider-wrapper">
+      <div class="slider-track" id="blogSlider">
+        <div class="blog-card">
+          <a href="blog-post1.html">
             <img src="images/acq.png" alt="Blog 1" />
-        </a>
-        <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
-      </div>
-      <div class="blog-card">
-        <img src="images/drk.png" alt="Blog 2" />
-        <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
-      </div>
-      <div class="blog-card">
-        <img src="images/acq.png" alt="Blog 3" />
-        <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+          </a>
+          <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
+        </div>
+
+        <div class="blog-card">
+          <img src="images/drk.png" alt="Blog 2" />
+          <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
+        </div>
+
+        <div class="blog-card">
+          <img src="images/acq.png" alt="Blog 3" />
+          <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="slider-controls">
-    <button onclick="slideBlog(-1)">←</button>
-    <button onclick="slideBlog(1)">→</button>
-  </div>
-</section>
+    <div class="slider-controls">
+      <button onclick="slideBlog(-1)">←</button>
+      <button onclick="slideBlog(1)">→</button>
+    </div>
+  </section>
 
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
 
+  <script src="script.js"></script>
 
-
-
-
-
-
-
-
-<!-- Custom Cursor Elements -->
-<div class="cursor-dot"></div>
-<script src="script.js"></script>
-
-    
-
-  <!-- Footer Container -->
+  <!-- Footer -->
   <div id="footer-container"></div>
 
-  <!-- Scripts (load after DOM is ready) -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       fetch('footer.html')

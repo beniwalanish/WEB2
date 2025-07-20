@@ -4,18 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Questions to Ask Before Signing with an Agency | Agency Bazar</title>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="mobile.css" />
 </head>
+
 <body>
-  <!-- Main Fixed Header -->
+  <!-- Fixed Header -->
   <header>
     <!-- Logo -->
     <a href="index.html" class="logo">Agency <span>Bazar</span></a>
-    
 
-    <!-- Centered Nav -->
+    <!-- Center Navigation -->
     <nav class="nav-pill">
       <div class="dropdown">
         <button class="dropbtn"><b>SERVICES ▾</b></button>
@@ -33,11 +35,9 @@
       <a href="onboard.html" style="color: red;"><b>ONBOARD</b></a>
     </nav>
 
-    <!-- Right CTA Button -->
+    <!-- CTA Button -->
     <a href="form.html" class="book-btn">POST REQUIREMENT</a>
   </header>
-
-
 
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobileMenu">
@@ -72,17 +72,15 @@
     </div>
   </div>
 
-  <!-- Menu Toggle Button -->
+  <!-- Hamburger Menu Button -->
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-
-<!-- Main Blog Content -->
+  <!-- Main Blog Post Content -->
   <main class="blog-post">
     <section class="post-container">
       <h1>Questions to Ask Before Signing with an Agency</h1>
 
       <p><strong>Hiring an agency can be exciting</strong> — but rushing in without asking the right questions can cost you time, money, and a lot of frustration. Before you say yes, here are a few smart questions to ask. These will help you find the right partner and avoid surprises later.</p>
-
       <hr />
 
       <h2>1. What exactly will you do for me?</h2>
@@ -93,7 +91,6 @@
         <li>What success will look like</li>
       </ul>
       <p>Don’t assume — ask clearly.</p>
-
       <hr />
 
       <h2>2. Can I see your past work?</h2>
@@ -104,7 +101,6 @@
         <li>How they solve real problems</li>
       </ul>
       <p>If they can’t show anything — that’s a red flag.</p>
-
       <hr />
 
       <h2>3. Who will I work with directly?</h2>
@@ -115,7 +111,6 @@
         <li>Is there one point of contact?</li>
       </ul>
       <p>Communication makes or breaks projects.</p>
-
       <hr />
 
       <h2>4. What is your process like?</h2>
@@ -126,7 +121,6 @@
         <li>What tools or systems will they use?</li>
       </ul>
       <p>A clear process = fewer surprises.</p>
-
       <hr />
 
       <h2>5. How do you charge, and what will I pay?</h2>
@@ -137,7 +131,6 @@
         <li>What happens if the work takes longer than expected?</li>
       </ul>
       <p>Good agencies are transparent about pricing.</p>
-
       <hr />
 
       <h2>6. What if things go wrong?</h2>
@@ -148,12 +141,10 @@
         <li>How do they handle disagreements?</li>
       </ul>
       <p>Knowing this now avoids stress later.</p>
-
       <hr />
 
       <h2>7. Can I talk to one of your past clients?</h2>
       <p>Hearing from someone who worked with them before helps you know what to expect. You don’t need a long interview — even a short review or testimonial helps.</p>
-
       <hr />
 
       <h2>8. How flexible are you?</h2>
@@ -164,7 +155,6 @@
         <li>Doesn’t treat you like “just another client”</li>
       </ul>
       <p>The best agencies feel like an extension of your team.</p>
-
       <hr />
 
       <h2>✅ Final Thought</h2>
@@ -172,59 +162,40 @@
     </section>
   </main>
 
-    
-
-
-
-<!-- Blog Slider Section -->
+  <!-- Blog Slider Section -->
   <section class="blog-slider">
-  <h2>More Blogs</h2>
+    <h2>More Blogs</h2>
 
-  <div class="slider-wrapper">
-    <div class="slider-track" id="blogSlider">
-      <div class="blog-card">
-        <a href="blog-post1.html">
+    <div class="slider-wrapper">
+      <div class="slider-track" id="blogSlider">
+        <div class="blog-card">
+          <a href="blog-post1.html">
             <img src="images/agency.png" alt="Blog 1" />
-        </a>
-        <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
-      </div>
-      <div class="blog-card">
-        <img src="images/sucks.png" alt="Blog 2" />
-        <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
-      </div>
-      <div class="blog-card">
-        <img src="images/mistakes.png" alt="Blog 3" />
-        <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+          </a>
+          <h3><a href="blog-post1.html">What Is an Agency?</a></h3>
+        </div>
+        <div class="blog-card">
+          <img src="images/sucks.png" alt="Blog 2" />
+          <h3><a href="blog-post2.html">Why Agency Search Sucks</a></h3>
+        </div>
+        <div class="blog-card">
+          <img src="images/mistakes.png" alt="Blog 3" />
+          <h3><a href="blog-post3.html">Startup Hiring Mistakes</a></h3>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="slider-controls">
-    <button onclick="slideBlog(-1)">←</button>
-    <button onclick="slideBlog(1)">→</button>
-  </div>
-</section>
+    <div class="slider-controls">
+      <button onclick="slideBlog(-1)">←</button>
+      <button onclick="slideBlog(1)">→</button>
+    </div>
+  </section>
 
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
 
-
-
-
-
-
-
-
-
-
-<!-- Custom Cursor Elements -->
-<div class="cursor-dot"></div>
-<script src="script.js"></script>
-
-    
-
-  <!-- Footer Container -->
-  <div id="footer-container"></div>
-
-  <!-- Scripts (load after DOM is ready) -->
+  <!-- Scripts -->
+  <script src="script.js"></script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       fetch('footer.html')
@@ -235,5 +206,8 @@
         .catch(err => console.error('Error loading footer:', err));
     });
   </script>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-container"></div>
 </body>
 </html>
