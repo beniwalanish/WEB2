@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atomik Growth Header</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="mobile.css" />
   <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="mobile.css" />
 </head>
 <body>
 
   <!-- Main Fixed Header -->
   <header>
     <!-- Logo -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <a href="index.html" class="logo">Agency <span>Bazar</span></a>
-
-    <!-- Hamburger Icon -->
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <!-- Centered Nav -->
     <nav class="nav-pill">
@@ -42,40 +39,40 @@
   </header>
 
   <!-- Mobile Menu Overlay -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-header">
-    <div class="logo"><span style="color: white">Agency</span> <span style="color: #3970ec">Bazar</span></div>
-    <div class="menu-icons">
-      <button class="menu-close" onclick="toggleMenu()">✕</button>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="logo" style="color: white;">Agency <span>Bazar</span></a>
+      <div class="menu-icons">
+        <button class="menu-close" onclick="toggleMenu()">✕</button>
+      </div>
     </div>
-  </div>
 
-  <nav class="mobile-nav">
-    <ul>
-      <li><a href="about.html"><b>ABOUT US</b></a></li>
-      <li><a href="studio.html"><b>STUDIO</b></a></li>
-      <li><a href="contact.html"><b>CONTACT</b></a></li>
-      <li><a href="blog.html"><b>BLOGS</b></a></li>
-      <li><a href="faq.html"><b>FAQ</b></a></li>
-      <li><a href="onboard.html" style="color: red;"><b>ONBOARD</b></a></li>
-    </ul>
-  </nav>
-
-  <div class="mobile-footer-links">
-    <div>
-      <p>CONNECT WITH US</p>
+    <nav class="mobile-nav">
       <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">LinkedIn</a></li>
+        <li><a href="about.html"><b>ABOUT US</b></a></li>
+        <li><a href="studio.html"><b>STUDIO</b></a></li>
+        <li><a href="contact.html"><b>CONTACT</b></a></li>
+        <li><a href="blog.html"><b>BLOGS</b></a></li>
+        <li><a href="faq.html"><b>FAQ</b></a></li>
+        <li><a href="onboard.html" style="color: red;"><b>ONBOARD</b></a></li>
       </ul>
+    </nav>
+
+    <div class="mobile-footer-links">
+      <div>
+        <p>CONNECT WITH US</p>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Menu Toggle Button -->
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <!-- Menu Toggle Button -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
   <!-- Floating Badges -->
   <div class="badge tech-founders">Tech Founders</div>
@@ -103,14 +100,10 @@
     <p class="description">
       Agency Mart connects businesses with trusted service providers in marketing, tech, design, logistics, and more.
     </p>
-
-    <!-- Lightning Icon -->
-    <div class="lightning">⚡</div>
   </section>
 
-  <!-- Flip Card Section -->
+  <!-- How It Works Section -->
   <section class="heading-section">
-    <br><br>
     <h1>How It Works</h1>
   </section>
 
@@ -126,10 +119,9 @@
 
     <div class="tabs-content">
       <div class="tab-content active" id="tab1">
-        <h1 class="underlined-heading">
+        <h2 class="underlined-heading">
           Whether you’re launching a product, scaling your marketing, or fixing a growth bottleneck — start by submitting a simple brief.
-        </h1>
-        <!-- <p>UI/UX, Branding, and Creative services that wow your users.</p> -->
+        </h2>
       </div>
 
       <div class="tab-content" id="tab2">
@@ -146,6 +138,7 @@
     </div>
   </section>
 
+  <!-- Why Agency Bazar -->
   <section class="index-card">
     <section class="heading-section">
       <h1 style="color: #476fe4;">Why Agency Bazar?</h1>
@@ -153,32 +146,32 @@
 
     <section class="card-grid">
       <div class="card">
-        <h3>Curated, Vetted Agencies Only</h3><br><br><br>
+        <h3>Curated, Vetted Agencies Only</h3>
         <p>We screen every agency for quality, experience, and reliability — so you’re not wasting time or money.</p>
       </div>
 
       <div class="card">
-        <h3>Fast Matching, Zero Guesswork</h3><br><br><br>
+        <h3>Fast Matching, Zero Guesswork</h3>
         <p>Post your brief once. Get matched with the right partners in under 48 hours — no endless searching.</p>
       </div>
 
       <div class="card">
-        <h3>Transparent Quotes, Side-by-Side</h3><br><br><br>
+        <h3>Transparent Quotes, Side-by-Side</h3>
         <p>Receive proposals tailored to your budget and goals. Compare timelines, pricing, and approaches easily.</p>
       </div>
 
       <div class="card">
-        <h3>One Platform, Every Service</h3><br><br><br>
+        <h3>One Platform, Every Service</h3>
         <p>Whether it’s design, dev, marketing, or legal — everything your business needs under one roof.</p>
       </div>
 
       <div class="card">
-        <h3>Project Support When You Need It</h3><br><br><br>
+        <h3>Project Support When You Need It</h3>
         <p>We don’t disappear after the match — our team is here to support your project success.</p>
       </div>
 
       <div class="card">
-        <h3>Built for Fast Founders & Teams</h3><br><br><br>
+        <h3>Built for Fast Founders & Teams</h3>
         <p>We know startups and scaling teams don’t have time to waste. Agency Bazar simplifies the process from brief to onboarding.</p>
       </div>
     </section>
@@ -187,8 +180,8 @@
   <!-- Custom Cursor -->
   <div class="cursor-dot"></div>
 
+  <!-- Services We Provide Section -->
   <section class="heading-section">
-    <br><br><br><br><br>
     <h1>Services We Provide</h1>
   </section>
 
@@ -198,11 +191,10 @@
       <hr />
       <button class="accordion-header">Branding</button>
       <div class="accordion-content">
-        <br>
-        <p style="font-size: 23px;">Brand Strategy</p><br>
-        <p style="font-size: 23px;">Visual Identity</p><br>
-        <p style="font-size: 23px;">Brand Positioning</p><br>
-        <p style="font-size: 23px;">Motion Identity</p><br>
+        <p>Brand Strategy</p>
+        <p>Visual Identity</p>
+        <p>Brand Positioning</p>
+        <p>Motion Identity</p>
       </div>
       <hr />
     </div>
@@ -210,11 +202,10 @@
     <div class="accordion-item">
       <button class="accordion-header">UI/UX Design</button>
       <div class="accordion-content">
-        <br>
-        <p style="font-size: 23px;">User Flows</p><br>
-        <p style="font-size: 23px;">No-code Frontend</p><br>
-        <p style="font-size: 23px;">Prototyping</p><br>
-        <p style="font-size: 23px;">Mobile/Web Apps</p><br>
+        <p>User Flows</p>
+        <p>No-code Frontend</p>
+        <p>Prototyping</p>
+        <p>Mobile/Web Apps</p>
       </div>
       <hr />
     </div>
@@ -222,21 +213,19 @@
     <div class="accordion-item">
       <button class="accordion-header">Packaging Design</button>
       <div class="accordion-content">
-        <br>
-        <p style="font-size: 23px;">User Flows</p><br>
-        <p style="font-size: 23px;">No-code Frontend</p><br>
-        <p style="font-size: 23px;">Prototyping</p><br>
-        <p style="font-size: 23px;">Mobile/Web Apps</p><br>
+        <p>User Flows</p>
+        <p>No-code Frontend</p>
+        <p>Prototyping</p>
+        <p>Mobile/Web Apps</p>
       </div>
       <hr />
-      <br><br><br><br><br>
     </div>
   </div>
 
   <!-- Email Signup Form -->
   <form class="contact-form">
     <div class="form-group-row">
-      <input type="text" placeholder="ENTER YOUR EMAIL ADDRESS FOR UPDATES" />
+      <input type="text" placeholder="ENTER YOUR EMAIL FOR UPDATES" />
       <button type="submit">→</button>
     </div>
   </form>

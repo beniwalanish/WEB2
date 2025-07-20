@@ -87,6 +87,7 @@ accordionHeaders.forEach(header => {
 
 
 // FAQ Accordion Functionality
+// FAQ Accordion (same as .accordion)
 const faqHeaders = document.querySelectorAll(".faq-header");
 
 faqHeaders.forEach(header => {
@@ -95,6 +96,7 @@ faqHeaders.forEach(header => {
     parent.classList.toggle("active");
   });
 });
+
 
 
 
@@ -206,6 +208,25 @@ tabButtons.forEach(btn => {
 
 
 function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  menu.classList.toggle("show");
+  const menu = document.getElementById('mobileMenu');
+  const body = document.body;
+
+  menu.classList.toggle('show');
+
+  if (menu.classList.contains('show')) {
+    body.style.overflow = 'hidden'; // ✅ lock scroll
+  } else {
+    body.style.overflow = ''; // ✅ restore scroll
+  }
 }
+
+
+
+
+
+
+
+
+
+
+

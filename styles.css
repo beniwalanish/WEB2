@@ -289,6 +289,7 @@ l
 .accordion {
   width: 80%;
   margin: 2rem auto;
+  margin-bottom: 250px;
 }
 
 .accordion-header {
@@ -317,6 +318,7 @@ l
 }
 
 .accordion-content {
+  font-size: 25px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease, opacity 1s ease;
@@ -354,11 +356,11 @@ hr {
   color: #476fe4;
   text-align: left;
   width: 100%;
-  padding: 1rem 0;
+  padding: 0 0;
   cursor: pointer;
   outline: none;
   position: relative;
-  height: 30px;
+  height: 1px fit-content;
 }
 
 .faq-header::after {
@@ -373,6 +375,7 @@ hr {
 }
 
 .faq-content {
+  font-size: 25px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease, opacity 1s ease;
@@ -884,6 +887,7 @@ hr {
   margin: 50px auto;
   box-shadow: 0 0 0 rgba(255,255,255,0);
   background-color: black;
+  margin-bottom: 150px;
 }
 
 .index-card:hover {
@@ -1186,11 +1190,18 @@ hr {
 
 
 
+.blogs-page .heading-section {
+  margin-bottom: 0.5rem;
+}
 
+.blogs-page .case-title-link {
+  margin-top: 0; /* ensure no gap before blog title */
+}
 
 /* case-studies.css */
 .case-studies {
   padding: 80px 20px;
+  padding-top: 1px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   text-align: center;
@@ -1203,7 +1214,8 @@ hr {
 
 .case-grid {
   display: grid;
-  
+  margin-top: 0;         /* remove extra margin if any */
+  padding-top: 0;        /* optional */
   gap: 1rem;
   max-width: 65%;
   margin: auto;
@@ -1245,7 +1257,7 @@ hr {
   text-align: left;
   font-weight: 500;
   font-size: 2.5rem;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   display: block;
   position: relative;
   padding-bottom: 0;
@@ -1417,7 +1429,7 @@ hr {
 .heading-section h1 {
   font-size: 7rem;
   color: #fcd91d;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
   text-align: center;
 }
 
@@ -1428,12 +1440,13 @@ hr {
   max-width: 1500px;
   margin: 80px auto;
   padding: 0 20px;
+  margin-bottom: 1px;
 }
 
 .onboard-section h1 {
   font-size: 7rem;
   color: #fcd91d;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
   text-align: left;
 }
 
@@ -1468,6 +1481,20 @@ hr {
 .onboard-section li {
   margin-bottom: 0.6rem;
   color: #000000;
+}
+
+.onboard-section-center {
+  max-width: 1500px;
+  margin: 80px auto;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.onboard-section-center h1 {
+  font-size: 7rem;
+  color: #fcd91d;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 hr {
@@ -1846,6 +1873,7 @@ textarea {
 
 /* Full form container */
 .contact-form {
+  margin-top: 200px;   /* reduce top space */
   display: flex;
   flex-direction: column;
   align-items: center; /* Center form horizontally */
