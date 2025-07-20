@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>Contact | Agency Bazar</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="mobile.css" />
 </head>
 <body>
+
   <!-- Main Fixed Header -->
   <header>
     <!-- Logo -->
     <a href="index.html" class="logo">Agency <span>Bazar</span></a>
-    
 
     <!-- Centered Nav -->
     <nav class="nav-pill">
@@ -36,97 +37,104 @@
     <a href="form.html" class="book-btn">POST REQUIREMENT</a>
   </header>
 
-  <!-- Main Content -->
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="logo" style="color: white;">Agency <span>Bazar</span></a>
+      <div class="menu-icons">
+        <button class="menu-close" onclick="toggleMenu()">✕</button>
+      </div>
+    </div>
 
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="about.html"><b>ABOUT US</b></a></li>
+        <li><a href="studio.html"><b>STUDIO</b></a></li>
+        <li><a href="contact.html"><b>CONTACT</b></a></li>
+        <li><a href="blog.html"><b>BLOGS</b></a></li>
+        <li><a href="faq.html"><b>FAQ</b></a></li>
+        <li><a href="onboard.html" style="color: red;"><b>ONBOARD</b></a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-footer-links">
+      <div>
+        <p>CONNECT WITH US</p>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Toggle Button -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Main Content -->
   <section class="onboard-section">
     <h1 style="color: blue;">You didn't come this far for no reason.</h1>
-    <br>
+    <br />
     <h1>Lets Talk.</h1>
     <!-- <h2>Our Criteria, Process, and Commitment to Quality</h2> -->
   </section>
 
-
-
   <div class="contact-container">
-  <div class="contact-left">
-    <h5>GIVE US A CALL</h5>
-    <p>(+91) 7019232059</p>
+    <div class="contact-left">
+      <h5>GIVE US A CALL</h5>
+      <p>(+91) 7019232059</p>
 
-    <h5>DROP BY FOR A CUP OF COFFEE</h5>
-    <p>1230, 4th Cross Rd, HAL 3rd Stage,<br>
-       New Thippasandra, Indiranagar, Bengaluru, Karnataka<br>
-       | 560075</p>
+      <h5>DROP BY FOR A CUP OF COFFEE</h5>
+      <p>
+        1230, 4th Cross Rd, HAL 3rd Stage,<br />
+        New Thippasandra, Indiranagar, Bengaluru, Karnataka<br />
+        | 560075
+      </p>
 
-    <h5>START A PROJECT</h5>
-    <p>hi@mellowdesigns.co</p>
+      <h5>START A PROJECT</h5>
+      <p>hi@mellowdesigns.co</p>
 
-    <h5>START YOUR CAREER</h5>
-    <p>hiring@mellowdesigns.co</p>
-  </div>
+      <h5>START YOUR CAREER</h5>
+      <p>hiring@mellowdesigns.co</p>
+    </div>
 
-  <div class="contact-right">
-    <form>
-      <div class="input-row">
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email Address" />
-      </div>
-
-      <div class="input-row">
-        <input type="text" placeholder="Company" />
-        <div class="phone-group">
-          <span class="flag">🇮🇳 +91</span>
-          <input type="tel" placeholder="Phone Number" />
+    <div class="contact-right">
+      <form>
+        <div class="input-row">
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email Address" />
         </div>
-      </div>
 
-      <select>
-        <option>Select Service</option>
-        <option>Web Development</option>
-        <option>Branding</option>
-        <option>Marketing</option>
-        <option>Design</option>
-      </select>
+        <div class="input-row">
+          <input type="text" placeholder="Company" />
+          <div class="phone-group">
+            <span class="flag">🇮🇳 +91</span>
+            <input type="tel" placeholder="Phone Number" />
+          </div>
+        </div>
 
-      <textarea placeholder="Message"></textarea>
+        <select>
+          <option>Select Service</option>
+          <option>Web Development</option>
+          <option>Branding</option>
+          <option>Marketing</option>
+          <option>Design</option>
+        </select>
 
-      <button type="submit">Submit</button>
-    </form>
+        <textarea placeholder="Message"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </div>
-</div>
-
-
-
-
-
 
   <script src="form-script.js"></script>
 
-
-
-
-
-
-
-
-
-
-<section class="liquid-card-section" style="background-color: black;">
-  <div class="liquid-glass-card">
-    <h2>Find the perfect<br>complement<br>to your room</h2>
-    <p>We will help you find plants that match your needs and style. Check our offer in the store and surround yourself with greenery!</p>
-    <button class="liquid-glass-btn">Buy now</button>
-  </div>
-</section>
-
-
-
-
-
-
-<!-- Custom Cursor Elements -->
-<div class="cursor-dot"></div>
-<script src="script.js"></script>
-    
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot"></div>
+  <script src="script.js"></script>
 
   <!-- Footer Container -->
   <div id="footer-container"></div>

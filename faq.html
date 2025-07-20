@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-scroll-container>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>FAQ | Agency Bazar</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="mobile.css" />
 </head>
-<body data-scroll-container>
+<body>
   <!-- Main Fixed Header -->
   <header>
     <!-- Logo -->
@@ -38,6 +39,44 @@
 
 
 
+  <!-- Hamburger Icon -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <div class="logo"><span style="color: white">Agency</span> <span style="color: #3970ec">Bazar</span></div>
+    <div class="menu-icons">
+      <button class="menu-close" onclick="toggleMenu()">✕</button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="about.html"><b>ABOUT US</b></a></li>
+      <li><a href="studio.html"><b>STUDIO</b></a></li>
+      <li><a href="contact.html"><b>CONTACT</b></a></li>
+      <li><a href="blog.html"><b>BLOGS</b></a></li>
+      <li><a href="faq.html"><b>FAQ</b></a></li>
+      <li><a href="onboard.html" style="color: red;"><b>ONBOARD</b></a></li>
+    </ul>
+  </nav>
+
+  <div class="mobile-footer-links">
+    <div>
+      <p>CONNECT WITH US</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Menu Toggle Button -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
   
 
 
@@ -89,11 +128,6 @@
     <hr>
   </div>
 </div>
-
-<br>
-<br>
-<br>
-<br>
 
 <section class="onboard-section">
     <h1>For Businesses</h1>
@@ -164,11 +198,6 @@
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-
 <section class="onboard-section">
     <h1>For Agencies</h1>
     <!-- <h2>Our Criteria, Process, and Commitment to Quality</h2> -->
@@ -218,11 +247,6 @@
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-
 <section class="onboard-section">
     <h1>Matching & Hiring Process</h1>
     <!-- <h2>Our Criteria, Process, and Commitment to Quality</h2> -->
@@ -261,11 +285,6 @@
     <hr>
   </div>
 </div>
-  
-<br>
-<br>
-<br>
-<br>
 
 <section class="onboard-section">
     <h1>Payments & Budget</h1>
@@ -296,11 +315,6 @@
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-
 <section class="onboard-section">
     <h1>Trust & Safety</h1>
     <!-- <h2>Our Criteria, Process, and Commitment to Quality</h2> -->
@@ -329,11 +343,6 @@
     <hr>
   </div>
 </div>
-
-<br>
-<br>
-<br>
-<br>
 
 <section class="onboard-section">
     <h1>Support</h1>

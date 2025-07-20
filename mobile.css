@@ -1,10 +1,24 @@
+/* --------------------------------------------
+   Mobile Styles (max-width: 768px)
+-------------------------------------------- */
 @media (max-width: 768px) {
+  /* Header Layout */
   header {
+    position: fixed !important; /* ensure stacking context is controllable */
+    z-index: 999 !important;       /* must be LESS than .mobile-menu */
+    top: 0;                              /* Stick to top */
+    left: 0;
+    width: 100%;
     flex-direction: column;
     padding: 10px 20px;
     align-items: flex-start;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid #e0e0e0 !important;
   }
 
+  /* Navigation Pills */
   .nav-pill {
     flex-direction: column;
     gap: 10px;
@@ -13,12 +27,14 @@
     width: 100%;
   }
 
+  /* Post Requirement Button */
   .book-btn {
     width: 100%;
     text-align: center;
     margin-top: 10px;
   }
 
+  /* Contact Section */
   .contact-container {
     flex-direction: column;
     height: auto;
@@ -33,41 +49,57 @@
     flex-direction: column;
   }
 
+  /* Form Group Row */
   .form-group-row {
-    flex-direction: column;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: flex-start;
-  }
+  display: flex;
+  flex-direction: row;           /* ✅ Horizontal layout */
+  align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  padding-bottom: 8px;
+  gap: 10px;                     /* Optional: space between input and button */
+  box-sizing: border-box;
+}
 
-  .form-group-row input {
-    font-size: 2rem;
-    width: 100%;
-  }
+.form-group-row input {
+  flex: 1;                       /* ✅ Take remaining space */
+  font-size: 2rem;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  color: #fcd91d;
+  outline: none;
+  min-width: 0;                  /* ✅ Prevent overflow issues */
+}
 
-  .form-group-row button {
-    width: 100%;
-    font-size: 2rem;
-    text-align: center;
-    padding: 10px 0;
-  }
+.form-group-row button {
+  font-size: 2rem;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  flex-shrink: 0;                /* ✅ Don't let it shrink */
+}
 
+  /* Tabs Header Section */
   .tabs-header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     gap: 20px;
-    overflow-x: 0;              /* Enable horizontal scroll */
+    overflow-x: auto;
     padding: 0 16px;
     box-sizing: border-box;
-    white-space: nowrap;           /* Prevent wrapping on the container */
+    white-space: nowrap;
     max-width: 100vw;
     -webkit-overflow-scrolling: touch;
   }
 
   .tab-btn {
-    flex: 1;   
+    flex: 1;
     font-size: 1.4rem;
     font-weight: bold;
     background: transparent;
@@ -75,43 +107,55 @@
     outline: none;
     color: #000;
     padding: 8px 12px;
-    white-space: normal;          /* Allow line breaks inside buttons */
+    white-space: normal;
     line-height: 1.3;
-    flex-shrink: 2;               /* Prevent shrinking */
-    max-width: 120px;             /* Helps long labels wrap nicely */
-    text-align: left;       /* Optional: center-align text */
-}
-
-  .tab-content h1 {
-    font-size: 2rem;     /* 👈 Optional: reduce heading size too */
-    margin-bottom: 0;  /* 👈 Adjust this value to control spacing */
+    flex-shrink: 2;
+    max-width: 120px;
+    text-align: left;
   }
 
+  .tab-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+  min-height: 410px;
+}
+
+  /* Headings */
   .heading-section h1,
+  .underlined-heading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .heading-section h2,
   .underlined-heading {
     font-size: 2.5rem;
     text-align: left;
   }
 
   .heading-section {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Optional: centers vertically if there's height */
-  text-align: center;
-}
-
-.heading-section h1 {
-  text-align: center;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 1px;
+  }
 
   .carousel-tabs-section {
-    padding: 20px 10px;
+    padding: 1px 10px;
   }
 
   .tab-divider {
     margin-top: 10px;
   }
 
+  /* Grid and Cards */
   .card,
   .process-card,
   .flip-card {
@@ -127,8 +171,17 @@
     width: 100%;
   }
 
+  .blog-post {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px 20px;
+}
+
+  /* Hero Section */
   .hero {
-    text-align: left;
+    margin-top: 10px;
+    text-align: center;
     padding: 60px 20px;
   }
 
@@ -136,8 +189,522 @@
     font-size: 2rem;
   }
 
+  .index-card {
+    margin-top: 1px;   /* reduce top space */
+    margin-bottom: 100px;
+  }
+
   .index-card,
   .liquid-glass-card {
     padding: 30px 20px;
   }
+
+  /* Floating Badges */
+  .badge {
+    position: absolute;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .tech-founders { top: 17%; left: 270px; }
+  .entrepreneurs { top: 13%; left: 20px; }
+  .business-owners { top: 28.5%; left: 25px; }
+  .non-technical { top: 50%; left: 240px; }
+  .general-partners { top: 57%; right: 270px; }
+  .agencies { top: 60%; right: 20px; }
+  .production-houses { top: 65%; right: 100px; }
+  .product-managers { top: 37.5%; right: 250px; }
+
+  /* Onboard Section */
+  .onboard-section {
+    padding: 40px 20px;
+    padding-bottom: 1px;
+    margin-bottom: 1px;
+  }
+
+  .onboard-section h1 {
+    font-size: 4rem;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .onboard-section-center {
+    padding: 40px 20px;
+    padding-bottom: 1px;
+    margin-bottom: 1px;
+  }
+
+  .onboard-section-center h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  /* FAQ Accordion */
+  .faq-accordion {
+    width: 90%;
+    margin: 1px auto;
+  }
+
+  .faq-header {
+    font-size: 1.5rem;
+    height: auto;
+  }
+
+  .faq-header::after {
+    right: 0px;
+  }
+
+  .faq-content {
+    padding-left: 1.7rem;
+    font-size: 5px !important;
+    text-align: justify;
 }
+
+  .faq-item {
+    margin-bottom: 1px;
+  }
+  
+  /* Accordion Styling */
+  .accordion {
+    width: 90%;
+    margin: 2rem auto;
+    margin-bottom: 100px;
+  }
+
+  .accordion-header {
+    font-size: 2.5rem;
+    height: auto;
+  }
+
+  .accordion-header::after {
+    right: 10px;
+  }
+
+  .accordion-content {
+    padding-left: 1rem;
+    font-size: 20px;
+  }
+
+  .accordion-item {
+    margin-bottom: 1rem;
+  }
+
+  /* Contact Form Inline Row */
+  .contact-form {
+    margin-top: 125px;   /* reduce top space */
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .form-group-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    align-items: baseline; /* changed from center to baseline for better alignment */
+  }
+
+  .form-group-row input {
+    flex: 1;
+    font-size: 1rem;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: #000;
+    outline: none;
+    min-width: 0;
+    width: 100%;
+    padding: 1px 0; /* slightly reduce vertical padding */
+  }
+
+  .form-group-row input::placeholder {
+    color: #aaa;
+    font-size: 1rem;
+  }
+
+  .form-group-row button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    padding: 0 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* CTA Section (Call-To-Action) - Mobile Styles */
+  .cta-section {
+    position: relative;
+    background-color: #3970ec;
+    height: 300px;                        /* Reduced height for mobile */
+    text-align: center;
+    padding: 60px 20px 40px;             /* Adjusted padding */
+    overflow: visible;
+    border-radius: 40px 40px 0 0;        /* Softer curve on mobile */
+    margin-bottom: -50px;          /* 👈 Pull footer up closer */
+  }
+
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;                       /* Adjust curve position */
+    left: 0;
+    width: 100%;
+    height: 80px;                        /* Adjust curve height */
+    background-color: #3970ec;
+    border-bottom-left-radius: 100% 100%;
+    border-bottom-right-radius: 100% 100%;
+    z-index: -1;
+  }
+
+  .cta-section h2 {
+    margin: 0 0 20px;
+    font-size: 1.8rem;                   /* Smaller text */
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .cta-button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    display: inline-block;
+  }
+
+  .cta-button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Footer Container */
+  footer {
+    border-top-left-radius: 40px  !important;    /* Softer curve for small screens */
+    border-top-right-radius: 40px  !important;
+    padding: 1.5rem 1rem;
+    margin-top: 50px;               /* ✅ Pushes footer slightly down */
+  }
+
+  .footer-container {
+    flex-direction: column;         /* Stack columns vertically */
+    align-items: left;            /* Center-align content */
+    gap: 2rem;                      /* Maintain spacing between sections */
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+    min-width: unset;               /* Remove fixed min-width */
+    text-align: left;            /* Center text */
+  }
+
+  .footer-logo {
+    width: 120px;                  /* Slightly smaller logo */
+    margin-bottom: 1rem;
+  }
+
+  .footer-column h4 {
+    font-size: 1rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.95rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
+  
+
+  /* Footer CTA section override (optional if you reuse .cta-section) */
+  .cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+
+  /* Footer Marquee */
+  .footer-marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0 !important;
+    background-color: #000000; /* Optional: match footer background */
+  }
+
+  .marquee-track {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    animation: scroll-marquee 60s linear infinite;
+  }
+
+  .marquee-track::after {
+    content: attr(data-text);
+    display: inline-block;
+    padding-left: 2rem;
+  }
+
+  .marquee-track span {
+    font-size: 2.5rem;
+    padding-right: 2rem;
+    display: inline-block;
+  }
+
+  /* Keyframes to create seamless loop */
+  @keyframes scroll-marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+/* Blog Case Studies - Mobile View */
+.case-studies {
+  padding: 40px 16px;
+  padding-top: 1px;
+  background-color: #fff;
+}
+
+.case-grid {
+  display: flex;
+  flex-direction: column;   /* Stack blog items vertically */
+  gap: 0px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.case-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #222;
+  transition: transform 0.3s ease;
+}
+
+.case-card .case-image {
+  height: 150px;               /* Scaled down for mobile */
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Blog titles */
+.case-title-link {
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: left;
+  display: block;
+  color: #000;
+  margin: 0 0 2px 0;
+  padding-left: 5px;
+  line-height: 1.4;
+}
+
+/*onboard section*/
+.process-section {
+  padding: 40px 16px; /* Reduced padding for mobile */
+}
+
+.process-container {
+  flex-direction: column; /* Stack vertically */
+  gap: 24px;              /* Reduce spacing */
+  max-width: 100%;
+  align-items: flex-start;
+}
+
+.process-heading {
+  flex: unset;
+  width: 100%;
+}
+
+.process-heading h2 {
+  font-size: 1.8rem;       /* Smaller font for mobile */
+  width: 100%;             /* Full width on small screens */
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 2 cards per row */
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.process-card {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 24px;
+  transition: transform 0.3s ease;
+  height: auto;           /* ✅ Automatically adjust to content */
+  display: flex;
+  flex-direction: column; /* ✅ Ensure vertical layout */
+  justify-content: flex-start; /* ✅ Align content at the top */
+  height: 100%; /* 👈 fills full height of the grid cell */
+  
+}
+
+.process-card .icon {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.process-card h3 {
+  font-size: 1rem;
+}
+
+.process-card p {
+  font-size: 0.9rem;
+}
+}
+
+/* --------------------------------------------
+   Mobile Menu Styles (Outside Media Query)
+-------------------------------------------- */
+.mobile-menu {
+  z-index: 9999;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  z-index: 9999;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mobile-menu.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.menu-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-close,
+.menu-toggle {
+  z-index: 10000 !important;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 25px;
+}
+
+.menu-toggle {
+  top: 5px;
+  right: 20px;
+  z-index: 999;
+  font-size: 2rem;
+  color: #000;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.mobile-nav ul li {
+  margin: 10px 0;
+}
+
+.mobile-nav ul li a {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-align: right;
+  display: block;
+  padding-right: 20px;
+}
+
+.mobile-footer-links {
+  position: absolute;           /* ✅ Anchor to bottom-left */
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+  color: #fff;
+  gap: 10px;
+}
+
+.mobile-footer-links p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.mobile-footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-footer-links ul li {
+  margin: 4px 0;
+}
+
+.mobile-footer-links ul li a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+
